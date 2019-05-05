@@ -254,6 +254,9 @@
 													<div class="col-sm-10">
 														<div class="user-name row">
 															<span>{{ $rep->user->name }}</span>
+															@if(Auth::guard('customer')->user()->phan_quyen == "admin")
+																<span><b style="color: grey;">Quản trị viên<b></span>
+															@endif
 														</div>
 														<div class="user-feedback row">
 															<span>{{ $rep->noi_dung }}</span>
